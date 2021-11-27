@@ -35,7 +35,6 @@ cat << EOF > /usr/local/etc/xray/config.json
                     "acceptProxyProtocol": true,
                     "path": "/"
                 }
-            }
         }
     ],
     "outbounds": [
