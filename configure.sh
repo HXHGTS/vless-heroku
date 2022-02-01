@@ -32,35 +32,15 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "ws"
             },
                 "wsSettings": {
-                    "acceptProxyProtocol": true,
                     "path": "/"
                 }
         }
     ],
-  "outbounds": [
-    {
-      "tag":"INTERNET_OUT",
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP"
-      }
-    }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "outboundTag": "INTERNET_OUT",
-        "network": "udp,tcp"
-      }
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
     ]
-  },
-  "dns": {
-    "servers": [
-      "1.1.1.1",
-      "1.0.0.1"
-]
-}
 }
 EOF
 
